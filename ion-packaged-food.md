@@ -19,6 +19,7 @@
 | Vegetarian (Yes/No)         | `RetailResource.food.classification`                                      | enum                       | `VEG` / `NON_VEG` / `EGG`          |
 | Shelf Life                  | `FoodAndBeverageResource.preparation.shelfLife`                           | string (ISO 8601 duration) | e.g. "P5D" for 5 days              |
 | Allergen Info               | `FoodAndBeverageResource.allergens`                                       | array of enum              | e.g. `["DAIRY", "EGGS", "GLUTEN"]` |
+| Nutritions                |  | | 
 
 ## Pricing Fields
 
