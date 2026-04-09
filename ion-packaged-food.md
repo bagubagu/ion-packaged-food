@@ -1,32 +1,4 @@
-# What needs to be in the catalogue
-
-| Usage                                                | Existng Schema                                  |
-| ---------------------------------------------------- | ----------------------------------------------- |
-| BPOM registration                                    | `RetailResource.foodRegulatoryDeclaration`      |
-| IsHalal                                              | `RetailResource.foodRegulatoryDeclaration`      |
-| Halal certificate image URL, BPOM document           | `RetailResource.credentials`                    |
-| Product name, description, images                    | `Resource.descriptor`                           |
-| Brand name                                           | `RetailResource.identity.brand`                 |
-| Vegetarian status (VEG/NON_VEG/EGG)                  | `RetailResource.food.classification`            |
-| Net weight                                           | `RetailResource.physical.weight`                |
-| Cake dimensions per size                             | `RetailResource.physical.dimensions`            |
-| Store location (GPS + address)                       | `RetailResource.availableAt`                    |
-| Allergen info                                        | `FoodAndBeverageResource.allergens`             |
-| Shelf life                                           | `FoodAndBeverageResource.preparation.shelfLife` |
-| Size variants (S/M/L), gift packaging types          | `FoodAndBeverageOffer.customization`            |
-| Base price + price components                        | `RetailOffer.price` (PriceSpecification)        |
-| Max delivery radius                                  | `RetailOffer.serviceability.distanceConstraint` |
-| Return/cancellation for perishable goods             | `RetailOffer.policies`                          |
-| HOME_DELIVERY, STORE_PICKUP                          | `Fulfillment.mode`                              |
-| Order tracking stages                                | `Fulfillment.stages`                            |
-| Price breakdown (unit, delivery, fees)               | `PriceSpecification.components`                 |
-| GPS coordinates for distance calculation             | `Location.geo` (GeoJSON)                        |
-| Free-text gift note message from buyer               |
-| Maintain cake temperature during delivery            |
-| Return computed distance for sorting                 |
-| Pre-order delivery time estimate                     |
-| Distance-based result sorting                        |
-| Fresh bakery products not in packaged foods taxonomy |
+# ION Packaged Food Schema
 
 ## Product Fields
 
