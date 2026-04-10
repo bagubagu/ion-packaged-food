@@ -12,7 +12,7 @@
 | Quantity                    | `Offer.offerAttributes.customization.groups[code=SIZE]`                   | FoodAndBeverageOffer       | Modeled as size variant selection  |
 | Net Weight                  | `RetailResource.physical.weight`                                          | Quantity                   | Weight per size variant            |
 | BPOM Registration           | `RetailResource.foodRegulatoryDeclaration.registrations[scheme=BPOM]`     | object                     | BPOM MD/ML number                  |
-| Halal (Yes/No)              | `RetailResource.foodRegulatoryDeclaration.registrations[scheme=HALAL]`    | object                     | Presence indicates certified       |
+| Halal (Yes/No)              | `RetailResource.foodRegulatoryDeclaration.registrations[+scheme=HALAL]`    | object                     | Presence indicates certified       |
 | Halal Certification Number  | `RetailResource.foodRegulatoryDeclaration.registrations[scheme=HALAL].id` | string                     | e.g. "LPPOM-00160123450124"        |
 | Halal Certificate Image URL | `RetailResource.credentials[type=HALAL_CERTIFICATE].uri`                  | credential                 | URI to certificate image/PDF       |
 | Organic (Yes/No)            | `RetailResource.credentials[type=ORGANIC_CERTIFICATE]`                    | credential                 | Presence indicates certified       |
@@ -20,6 +20,8 @@
 | Shelf Life                  | `FoodAndBeverageResource.preparation.shelfLife`                           | string (ISO 8601 duration) | e.g. "P5D" for 5 days              |
 | Allergen Info               | `FoodAndBeverageResource.allergens`                                       | array of enum              | e.g. `["DAIRY", "EGGS", "GLUTEN"]` |
 | Nutritions                |  | | 
+| Origin | | | 
+
 
 ## Pricing Fields
 
@@ -32,6 +34,8 @@
 | Custom Gift Note        | `FoodAndBeverageOffer.customization.groups[code=GIFT_NOTE]`        | customization group | **`[EXT]` textInput field needed** |
 | Total Price             | `PriceSpecification.value` + `components[]`                        | PriceSpecification  | Sum of base + size delta + add-ons |
 | Estimated Delivery Time | `Fulfillment.stages[code=DELIVERY].time.duration`                  | string (ISO 8601)   | **`[EXT]` warm-delivery estimate** |
+| Discounted Price | | | 
+| Variant | | | 
 
 ### Fulfillment Fields
 
